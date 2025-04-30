@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'self';">
+
+    <title>تركيب وصيانة السخانات - السباك الذهبي | مياه ساخنة طوال العام</title>
+    <meta name="description" content="خدمات تركيب وصيانة وإصلاح جميع أنواع سخانات المياه (كهربائية، غاز، مركزية، شمسية) في الكويت. السباك الذهبي يضمن لك الأمان والكفاءة.">
+    
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="alternate" hreflang="en" href="heater-installation-en.html"> <!-- Placeholder -->
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <!-- Reusing service page styles for now -->
+    <style>
+        /* Temporary styles for service page - move to CSS file later */
+        .service-hero {
+            padding-top: 120px; /* Adjust based on header height */
+            padding-bottom: 60px;
+            background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(50, 51, 52, 0.8)), url('images/تركيب\ السخانات\ \ .jpg') no-repeat center center; /* Change background image */
+            background-size: cover;
+            color: white;
+            text-align: center;
+        }
+        .service-hero h1 {
+            font-size: 2.8rem;
+            color: var(--gold);
+            margin-bottom: 15px;
+        }
+        .service-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 20px;
+            opacity: 0.9;
+        }
+        .service-details {
+            padding: 80px 0;
+        }
+        .service-details .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        .service-content-area {
+            flex: 1 1 60%;
+        }
+        .service-sidebar {
+            flex: 1 1 35%;
+        }
+        .service-content-area h2 {
+            color: var(--dark-blue);
+            margin-bottom: 20px;
+            font-size: 2rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .service-content-area h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--gold);
+        }
+        .service-content-area h3 {
+            color: var(--dark-blue);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        .service-content-area ul {
+            list-style: none;
+            padding-right: 0;
+            margin-bottom: 20px;
+        }
+        .service-content-area ul li {
+            position: relative;
+            padding-right: 25px;
+            margin-bottom: 10px;
+        }
+        .service-content-area ul li::before {
+            content: '\f00c'; /* Check icon */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            right: 0;
+            top: 3px;
+            color: var(--gold);
+        }
+        .service-sidebar .widget {
+            background: #f9f9f9;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow-sm);
+        }
+        .service-sidebar .widget h3 {
+            color: var(--dark-blue);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 8px;
+        }
+        .service-sidebar .widget ul {
+            list-style: none;
+            padding: 0;
+        }
+        .service-sidebar .widget ul li {
+            margin-bottom: 10px;
+        }
+        .service-sidebar .widget ul li a {
+            color: var(--dark-gray);
+            text-decoration: none;
+            transition: var(--transition);
+            display: block;
+            padding: 8px 0;
+            border-bottom: 1px dashed #1a1919;
+        }
+         .service-sidebar .widget ul li:last-child a {
+             border-bottom: none;
+         }
+        .service-sidebar .widget ul li a:hover, .service-sidebar .widget ul li.active a {
+            color: var(--gold);
+            padding-right: 10px;
+        }
+        .service-cta-widget {
+            background: var(--dark-blue);
+            color: rgb(42, 40, 40);
+            text-align: center;
+        }
+        .service-cta-widget p {
+            margin-bottom: 15px;
+        }
+        @media (max-width: 768px) {
+            .service-hero h1 {
+                font-size: 2.2rem;
+            }
+            .service-details .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="spinner">
+            <i class="fas fa-wrench fa-spin fa-3x" style="color: #D4AF37;"></i>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="images/Golden Plumber.png" alt="شعار السباك الذهبي" id="logo-img">
+                <div class="logo-text">
+                    <h1>السباك الذهبي</h1>
+                </div>
+            </a>
+            <button class="mobile-menu-btn" aria-label="فتح القائمة">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i>الرئيسية</a></li>
+                    <li><a href="index.html#services" class="active-link"><i class="fas fa-tools"></i>خدماتنا</a></li>
+                    <li><a href="index.html#about"><i class="fas fa-info-circle"></i>من نحن</a></li>
+                    <li><a href="index.html#areas"><i class="fas fa-map-marker-alt"></i>مناطق الخدمة</a></li>
+                    <li><a href="index.html#contact"><i class="fas fa-phone"></i>اتصل بنا</a></li>
+                    <li><a href="faq.html"><i class="fas fa-question-circle"></i>الأسئلة الشائعة</a></li>
+                    <!-- Add links to other service pages later -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Overlay for mobile menu -->
+    <div class="overlay"></div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Service Hero Section -->
+        <section class="service-hero">
+            <div class="container">
+                <h1>تركيب وصيانة السخانات</h1>
+                <p>نوفر خدمات تركيب وصيانة وإصلاح احترافية لجميع أنواع سخانات المياه، لضمان حصولك على مياه ساخنة بشكل آمن ومستمر.</p>
+                <a href="index.html#contact" class="btn btn-primary">اطلب الخدمة الآن</a>
+            </div>
+        </section>
+
+        <!-- Service Details Section -->
+        <section class="service-details">
+            <div class="container">
+                <!-- Main Content Area -->
+                <div class="service-content-area">
+                    <h2>خبراء السخانات في خدمتك</h2>
+                    <p>سخان المياه هو جهاز أساسي في كل منزل، خاصة في فصل الشتاء. لضمان عمله بكفاءة وأمان، من الضروري تركيبه وصيانته بشكل صحيح بواسطة فنيين متخصصين. السباك الذهبي يقدم خدمات شاملة لجميع أنواع السخانات.</p>
+                    <img src="images/أفضل أنواع سخانات المياه التي نركبها.jpg" alt="أنواع سخانات المياه المختلفة" style="width:100%; max-width: 500px; border-radius: 8px; margin: 20px 0; box-shadow: var(--shadow-md);">
+
+                    <h3>أنواع السخانات التي نتعامل معها</h3>
+                    <p>يمتلك فريقنا الخبرة اللازمة للتعامل مع مختلف أنواع سخانات المياه المتوفرة في السوق الكويتي:</p>
+                    <ul>
+                        <li><strong>السخانات الكهربائية:</strong> الأكثر شيوعًا، تتوفر بأحجام مختلفة تناسب احتياجات كل أسرة.</li>
+                        <li><strong>سخانات الغاز:</strong> تتميز بسرعة التسخين وكفاءة استهلاك الطاقة.</li>
+                        <li><strong>السخانات المركزية:</strong> توفر حلاً متكاملاً للمباني الكبيرة والفيلات لتزويد جميع الوحدات بالمياه الساخنة.</li>
+                        <li><strong>السخانات الشمسية:</strong> خيار صديق للبيئة وموفر للطاقة على المدى الطويل.</li>
+                        <li><strong>السخانات الفورية:</strong> تسخن المياه عند الطلب دون الحاجة لخزان تخزين.</li>
+                    </ul>
+
+                    <h3>خدمات تركيب وصيانة السخانات</h3>
+                    <p>نقدم مجموعة متكاملة من الخدمات لضمان أفضل أداء لسخان المياه الخاص بك:</p>
+                    <ol style="padding-right: 20px; margin-bottom: 20px;">
+                        <li style="margin-bottom: 10px;"><strong>التركيب:</strong> تركيب السخان الجديد بشكل آمن وصحيح، مع توصيله بشبكة المياه والكهرباء أو الغاز حسب نوعه.</li>
+                        <li style="margin-bottom: 10px;"><strong>الصيانة الدورية:</strong> فحص السخان وتنظيفه من الترسبات، فحص صمام الأمان، والتأكد من كفاءة عمله لمنع الأعطال المفاجئة.</li>
+                        <li style="margin-bottom: 10px;"><strong>الإصلاح:</strong> تشخيص وإصلاح جميع أعطال السخانات، مثل عدم تسخين المياه، تسرب المياه، الأصوات الغريبة، أو مشاكل الترموستات.</li>
+                        <li style="margin-bottom: 10px;"><strong>الاستبدال:</strong> استبدال السخان القديم بآخر جديد عند الحاجة، مع تقديم النصح لاختيار النوع والحجم المناسبين.</li>
+                        <li style="margin-bottom: 10px;"><strong>تركيب وصيانة أنظمة السخانات المركزية والشمسية.</strong></li>
+                    </ol>
+
+                    <h3>نصائح للحفاظ على سخان المياه</h3>
+                    <ul>
+                        <li>قم بإجراء صيانة دورية للسخان مرة واحدة على الأقل سنويًا.</li>
+                        <li>لا تضبط درجة حرارة السخان على أعلى مستوى لتجنب الضغط الزائد وتقليل استهلاك الطاقة.</li>
+                        <li>راقب أي علامات تسرب للمياه حول السخان واتصل بنا فورًا عند ملاحظتها.</li>
+                        <li>تأكد من عمل صمام الأمان بشكل صحيح.</li>
+                    </ul>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="service-sidebar">
+                    <div class="widget">
+                        <h3>خدماتنا الأخرى</h3>
+                        <ul>
+                            <li><a href="faucet-repair.html">تركيب وإصلاح الحنفيات</a></li>
+                            <li><a href="bathroom-installation.html">تركيب وصيانة الحمامات</a></li>
+                            <li><a href="leak-detection.html">كشف وإصلاح التسريبات</a></li>
+                            <li><a href="drain-cleaning.html">تسليك المجاري</a></li>
+                            <li class="active"><a href="heater-installation.html">تركيب وصيانة السخانات</a></li>
+                            <li><a href="kitchen-plumbing.html">تركيب وصيانة المطابخ</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="widget service-cta-widget">
+                        <h3>مشكلة في سخان المياه؟</h3>
+                        <p>فريقنا جاهز لتقديم خدمة سريعة وموثوقة لتركيب أو صيانة أو إصلاح سخان المياه الخاص بك.</p>
+                        <a href="tel:+965 513 75332" class="btn btn-primary">
+                            <i class="fas fa-phone-alt"></i> اتصل الآن
+                        </a>
+                    </div>
+                    
+                    <div class="widget">
+                         <h3>لماذا تختار السباك الذهبي؟</h3>
+                         <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 10px; display: flex; align-items: center;"><i class="fas fa-shield-alt" style="color: var(--gold); margin-left: 10px; width: 20px;"></i> ضمان 5 سنوات</li>
+                            <li style="margin-bottom: 10px; display: flex; align-items: center;"><i class="fas fa-user-tie" style="color: var(--gold); margin-left: 10px; width: 20px;"></i> فنيون محترفون</li>
+                            <li style="margin-bottom: 10px; display: flex; align-items: center;"><i class="fas fa-clock" style="color: var(--gold); margin-left: 10px; width: 20px;"></i> خدمة 24/7</li>
+                            <li style="margin-bottom: 10px; display: flex; align-items: center;"><i class="fas fa-tools" style="color: var(--gold); margin-left: 10px; width: 20px;"></i> أحدث المعدات</li>
+                         </ul>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h4>السباك الذهبي</h4>
+                <p>نحن شركة رائدة في مجال خدمات السباكة في الكويت، نقدم خدمات احترافية بضمان 5 سنوات وأسعار منافسة.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="انستغرام"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/96551375332" target="_blank" rel="noopener noreferrer" aria-label="واتساب"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>روابط سريعة</h4>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="index.html#services">خدماتنا</a></li>
+                    <li><a href="index.html#about">من نحن</a></li>
+                    <li><a href="index.html#areas">مناطق الخدمة</a></li>
+                    <li><a href="index.html#contact">اتصل بنا</a></li>
+                    <li><a href="faq.html">الأسئلة الشائعة</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>معلومات الاتصال</h4>
+                <p><i class="fas fa-phone-alt"></i> +965 513 75332</p>
+                <p><i class="fas fa-map-marker-alt"></i> الكويت، حولي</p>
+                <p><i class="fas fa-clock"></i> متاح 24/7 لخدمات الطوارئ</p>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>جميع الحقوق محفوظة &copy; 2025 لشركة السباك الذهبي.</p>
+            <p class="developer-credit">
+                تصميم وتطوير:
+                <a href="https://wa.me/+201004308292" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-whatsapp"></i> Eng.Ahmed Hisham
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

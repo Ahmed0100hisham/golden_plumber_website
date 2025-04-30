@@ -1,0 +1,180 @@
+/* ===== تنسيقات إضافية لقسم الاتصال ===== */
+
+.contact {
+    padding: 100px 0;
+    background-color: #f9f9f9;
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.contact-info {
+    flex: 1 1 40%; /* Adjusted flex basis */
+    min-width: 300px; /* Minimum width for info */
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.contact-item i {
+    font-size: 1.8rem;
+    color: var(--gold);
+    margin-left: 15px;
+    min-width: 30px;
+    text-align: center;
+}
+
+.contact-item h3 {
+    color: var(--dark-blue);
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}
+
+.contact-item p {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.contact-item a {
+    color: #555;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.contact-item a:hover {
+    color: var(--gold);
+}
+
+.contact-form {
+    flex: 1 1 55%; /* Adjusted flex basis */
+    min-width: 320px; /* Minimum width for form */
+    background: white;
+    padding: 35px; /* Increased padding */
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 20px; /* Gap between columns and rows */
+}
+
+.form-group {
+    margin-bottom: 0; /* Remove bottom margin as grid gap handles spacing */
+}
+
+/* Make message textarea span both columns */
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label { /* Optional: Add labels if needed */
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: var(--dark-blue);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Tajawal', Arial, sans-serif;
+    font-size: 1rem;
+    color: var(--dark-gray);
+    transition: var(--transition);
+    text-align: right; /* Ensure RTL text alignment */
+    direction: rtl; /* Ensure RTL direction */
+}
+
+.form-group select {
+    /* Appearance for select dropdown */
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: left 1rem center; /* Position arrow on the left for RTL */
+    background-size: .65em auto;
+    padding-left: 2.5rem; /* Add padding to prevent text overlap with arrow */
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--gold);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-form .btn {
+    width: 100%;
+    margin-top: 25px; /* Increased top margin */
+    grid-column: 1 / -1; /* Make button span both columns */
+}
+
+/* Responsive adjustments for contact section */
+@media (max-width: 992px) {
+    .contact-content {
+        flex-direction: column;
+    }
+    
+    .contact-info {
+        flex: 1 1 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .contact-form {
+        flex: 1 1 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-item {
+        padding: 15px;
+    }
+    
+    .contact-item i {
+        font-size: 1.5rem;
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 10px 12px;
+    }
+}
+

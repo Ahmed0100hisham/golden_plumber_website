@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'self';">
+
+    <title>تسليك المجاري - السباك الذهبي | حلول سريعة لانسداد الصرف</title>
+    <meta name="description" content="خدمة تسليك المجاري والبالوعات في الكويت باستخدام أحدث المعدات. السباك الذهبي يقدم حلولاً فعالة وسريعة لجميع مشاكل انسداد الصرف الصحي.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="alternate" hreflang="en" href="drain-cleaning-en.html"> <!-- Placeholder -->
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <!-- Reusing service page styles for now -->
+    <style>
+        /* Temporary styles for service page - move to CSS file later */
+        .service-hero {
+            padding-top: 120px; /* Adjust based on header height */
+            padding-bottom: 60px;
+            background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(44, 45, 46, 0.8)), url('images/تسليك\ مجاري.jpg') no-repeat center center; /* Change background image */
+            background-size: cover;
+            color: white;
+            text-align: center;
+        }
+        .service-hero h1 {
+            font-size: 2.8rem;
+            color: var(--gold);
+            margin-bottom: 15px;
+        }
+        .service-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 20px;
+            opacity: 0.9;
+        }
+        .service-details {
+            padding: 80px 0;
+        }
+        .service-details .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        .service-content-area {
+            flex: 1 1 60%;
+        }
+        .service-sidebar {
+            flex: 1 1 35%;
+        }
+        .service-content-area h2 {
+            color: var(--dark-blue);
+            margin-bottom: 20px;
+            font-size: 2rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .service-content-area h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--gold);
+        }
+        .service-content-area h3 {
+            color: var(--dark-blue);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        .service-content-area ul {
+            list-style: none;
+            padding-right: 0;
+            margin-bottom: 20px;
+        }
+        .service-content-area ul li {
+            position: relative;
+            padding-right: 25px;
+            margin-bottom: 10px;
+        }
+        .service-content-area ul li::before {
+            content: '\f00c'; /* Check icon */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            right: 0;
+            top: 3px;
+            color: var(--gold);
+        }
+        .service-sidebar .widget {
+            background: #f9f9f9;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow-sm);
+        }
+        .service-sidebar .widget h3 {
+            color: var(--dark-blue);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 8px;
+        }
+        .service-sidebar .widget ul {
+            list-style: none;
+            padding: 0;
+        }
+        .service-sidebar .widget ul li {
+            margin-bottom: 10px;
+        }
+        .service-sidebar .widget ul li a {
+            color: var(--dark-gray);
+            text-decoration: none;
+            transition: var(--transition);
+            display: block;
+            padding: 8px 0;
+            border-bottom: 1px dashed #eee;
+        }
+         .service-sidebar .widget ul li:last-child a {
+             border-bottom: none;
+         }
+        .service-sidebar .widget ul li a:hover, .service-sidebar .widget ul li.active a {
+            color: var(--gold);
+            padding-right: 10px;
+        }
+        .service-cta-widget {
+            background: var(--dark-blue);
+            color: rgb(0, 0, 0);
+            text-align: center;
+        }
+        .service-cta-widget p {
+            margin-bottom: 15px;
+        }
+        @media (max-width: 768px) {
+            .service-hero h1 {
+                font-size: 2.2rem;
+            }
+            .service-details .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="spinner">
+            <i class="fas fa-wrench fa-spin fa-3x" style="color: #D4AF37;"></i>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="images/Golden Plumber.png" alt="شعار السباك الذهبي" id="logo-img">
+                <div class="logo-text">
+                    <h1>السباك الذهبي</h1>
+                </div>
+            </a>
+            <button class="mobile-menu-btn" aria-label="فتح القائمة">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i>الرئيسية</a></li>
+                    <li><a href="index.html#services" class="active-link"><i class="fas fa-tools"></i>خدماتنا</a></li>
+                    <li><a href="index.html#about"><i class="fas fa-info-circle"></i>من نحن</a></li>
+                    <li><a href="index.html#areas"><i class="fas fa-map-marker-alt"></i>مناطق الخدمة</a></li>
+                    <li><a href="index.html#contact"><i class="fas fa-phone"></i>اتصل بنا</a></li>
+                    <li><a href="faq.html"><i class="fas fa-question-circle"></i>الأسئلة الشائعة</a></li>
+                    <!-- Add links to other service pages later -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Overlay for mobile menu -->
+    <div class="overlay"></div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Service Hero Section -->
+        <section class="service-hero">
+            <div class="container">
+                <h1>تسليك المجاري والبالوعات</h1>
+                <p>لا تدع انسداد المجاري يعكر صفو يومك! نقدم خدمة تسليك سريعة وفعالة باستخدام أحدث المعدات لحل المشكلة من جذورها.</p>
+                <a href="index.html#contact" class="btn btn-primary">اطلب الخدمة الآن</a>
+            </div>
+        </section>
+
+        <!-- Service Details Section -->
+        <section class="service-details">
+            <div class="container">
+                <!-- Main Content Area -->
+                <div class="service-content-area">
+                    <h2>وداعاً لانسداد المجاري والروائح الكريهة</h2>
+                    <p>يعتبر انسداد المجاري والبالوعات من أكثر المشاكل إزعاجًا في المنازل والمباني، حيث يتسبب في تجمع المياه القذرة، انتشار الروائح الكريهة، وقد يؤدي إلى أضرار صحية وبيئية. السباك الذهبي يقدم حلولاً متخصصة وسريعة للتغلب على هذه المشكلة.</p>
+                    <img src="images/فريق تسليك المجاري.jpg" alt="ماكينة تسليك المجاري بالضغط" style="width:100%; max-width: 500px; border-radius: 8px; margin: 20px 0; box-shadow: var(--shadow-md);">
+
+                    <h3>أسباب انسداد المجاري الشائعة</h3>
+                    <p>تتعدد أسباب انسداد المجاري، ومن أبرزها:</p>
+                    <ul>
+                        <li>تراكم بقايا الطعام والدهون والزيوت في مجاري المطبخ.</li>
+                        <li>تجمع الشعر والصابون في مصارف الحمامات والدش.</li>
+                        <li>إلقاء المناديل الورقية والمواد غير القابلة للتحلل في المراحيض.</li>
+                        <li>تراكم الرواسب والأوساخ داخل الأنابيب مع مرور الوقت.</li>
+                        <li>وجود أجسام غريبة تسقط في البالوعات أو المراحيض.</li>
+                        <li>مشاكل في تصميم أو تركيب شبكة الصرف الصحي.</li>
+                    </ul>
+
+                    <h3>طرق التسليك المتقدمة التي نستخدمها</h3>
+                    <p>نعتمد على مجموعة متنوعة من المعدات والتقنيات الحديثة لضمان تسليك فعال ودائم للمجاري والبالوعات:</p>
+                    <ol style="padding-right: 20px; margin-bottom: 20px;">
+                        <li style="margin-bottom: 10px;"><strong>ماكينات التسليك بالضغط العالي للمياه (Water Jetting):</strong> لإزالة الدهون والرواسب الصلبة المتراكمة داخل الأنابيب.</li>
+                        <li style="margin-bottom: 10px;"><strong>ماكينات التسليك الكهربائية (السوستة الكهربائية):</strong> للوصول إلى الانسدادات العميقة وتفتيتها أو سحبها.</li>
+                        <li style="margin-bottom: 10px;"><strong>المواد الكيميائية الآمنة والفعالة:</strong> لإذابة بعض أنواع الانسدادات مثل الدهون والشعر (تستخدم بحذر).</li>
+                        <li style="margin-bottom: 10px;"><strong>كاميرات فحص الأنابيب:</strong> لتحديد مكان ونوع الانسداد بدقة قبل البدء بعملية التسليك.</li>
+                        <li style="margin-bottom: 10px;"><strong>أدوات التسليك اليدوية:</strong> للانسدادات البسيطة والقريبة.</li>
+                    </ol>
+
+                    <h3>خدمات تسليك المجاري التي نقدمها</h3>
+                    <ul>
+                        <li>تسليك مجاري المطابخ والحمامات.</li>
+                        <li>تسليك بالوعات الصرف الصحي الداخلية والخارجية.</li>
+                        <li>تسليك خطوط الصرف الرئيسية للمباني.</li>
+                        <li>تنظيف وإزالة الروائح الكريهة من البالوعات والمصارف.</li>
+                        <li>صيانة دورية لشبكات الصرف الصحي لمنع الانسدادات المستقبلية.</li>
+                        <li>خدمة طوارئ متاحة على مدار الساعة لحالات الانسداد الحرجة.</li>
+                    </ul>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="service-sidebar">
+                    <div class="widget">
+                        <h3>خدماتنا الأخرى</h3>
+                        <ul>
+                            <li><a href="faucet-repair.html">تركيب وإصلاح الحنفيات</a></li>
+                            <li><a href="bathroom-installation.html">تركيب وصيانة الحمامات</a></li>
+                            <li><a href="leak-detection.html">كشف وإصلاح التسريبات</a></li>
+                            <li class="active"><a href="drain-cleaning.html">تسليك المجاري</a></li>
+                            <li><a href="heater-installation.html">تركيب وصيانة السخانات</a></li>
+                            <li><a href="kitchen-plumbing.html">تركيب وصيانة المطابخ</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="widget service-cta-widget">
+                        <h3>انسداد في المجاري؟</h3>
+                        <p>لا تنتظر حتى تتفاقم المشكلة! اتصل بنا فورًا للحصول على خدمة تسليك سريعة وفعالة.</p>
+                        <a href="tel:+965 513 75332" class="btn btn-primary">
+                            <i class="fas fa-phone-alt"></i> اتصل الآن
+                        </a>
+                    </div>
+                    
+                    <div class="widget">
+                         <h3>لماذا تختار السباك الذهبي؟</h3>
+                         <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 10px; display: flex; align-items: center;"><i class="fas fa-shield-alt" style="color: var(--gold); margin-left: 10px; width: 20px;"></i> ضمان 5 سنوات</li>
+                            <li style="margin-bottom: 10px; display: flex; align-items: center;"><i class="fas fa-user-tie" style="color: var(--gold); margin-left: 10px; width: 20px;"></i> فنيون محترفون</li>
+                            <li style="margin-bottom: 10px; display: flex; align-items: center;"><i class="fas fa-clock" style="color: var(--gold); margin-left: 10px; width: 20px;"></i> خدمة 24/7</li>
+                            <li style="margin-bottom: 10px; display: flex; align-items: center;"><i class="fas fa-tools" style="color: var(--gold); margin-left: 10px; width: 20px;"></i> أحدث المعدات</li>
+                         </ul>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h4>السباك الذهبي</h4>
+                <p>نحن شركة رائدة في مجال خدمات السباكة في الكويت، نقدم خدمات احترافية بضمان 5 سنوات وأسعار منافسة.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="انستغرام"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/96551375332" target="_blank" rel="noopener noreferrer" aria-label="واتساب"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>روابط سريعة</h4>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="index.html#services">خدماتنا</a></li>
+                    <li><a href="index.html#about">من نحن</a></li>
+                    <li><a href="index.html#areas">مناطق الخدمة</a></li>
+                    <li><a href="index.html#contact">اتصل بنا</a></li>
+                    <li><a href="faq.html">الأسئلة الشائعة</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>معلومات الاتصال</h4>
+                <p><i class="fas fa-phone-alt"></i> +965 513 75332</p>
+                <p><i class="fas fa-map-marker-alt"></i> الكويت، حولي،  </p>
+                <p><i class="fas fa-clock"></i> متاح 24/7 لخدمات الطوارئ</p>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>جميع الحقوق محفوظة &copy; 2025 لشركة السباك الذهبي.</p>
+            <p class="developer-credit">
+                تصميم وتطوير:
+                <a href="https://wa.me/+201004308292" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-whatsapp"></i> Eng.Ahmed Hisham
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
