@@ -44,6 +44,34 @@ body {
     scroll-behavior: smooth;
 }
 
+
+.skip-link {
+    position: absolute;
+    top: -48px;
+    right: 16px;
+    background: var(--dark-blue);
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 8px;
+    z-index: 3000;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.skip-link:focus {
+    top: 16px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 2px;
+}
+
+
 .container {
     width: 100%;
     padding: 0 15px;
@@ -229,6 +257,19 @@ nav ul li a:hover {
     color: var(--gold);
     background-color: rgba(212, 175, 55, 0.08);
     padding-right: 30px;
+}
+
+
+.lang-switch {
+    border: 1px solid var(--gold);
+    border-radius: 999px;
+    padding: 6px 14px !important;
+    font-weight: 700;
+    color: var(--gold) !important;
+}
+
+.lang-switch:hover {
+    background: var(--gold-light) !important;
 }
 
 /* ===== القسم الرئيسي الذهبي ===== */
@@ -1270,3 +1311,14 @@ nav ul li a.active-link {
 }
 
 
+
+
+.form-status {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    min-height: 1.3em;
+}
+
+.form-status.success { color: #0f7b0f; }
+.form-status.error { color: #b22222; }

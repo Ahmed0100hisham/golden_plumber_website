@@ -8,7 +8,24 @@ document.addEventListener("DOMContentLoaded", function() {
     const sections = document.querySelectorAll("main section[id]");
     const logoImg = document.getElementById("logo-img");
     const contactForm = document.getElementById("contactForm");
+    const formStatus = document.getElementById("form-status");
     let lastScrollTop = 0;
+
+    const isEnglish = document.documentElement.lang.toLowerCase().startsWith("en");
+    const uiText = isEnglish
+        ? {
+            required: "Please fill in all required fields.",
+            phoneInvalid: "Please enter a valid phone number.",
+            preparing: "Preparing your request and opening WhatsApp...",
+            redirected: "WhatsApp opened in a new tab."
+        }
+        : {
+            required: "يرجى ملء جميع الحقول المطلوبة.",
+            phoneInvalid: "يرجى إدخال رقم هاتف صحيح.",
+            preparing: "جاري تجهيز طلبك وفتح واتساب...",
+            redirected: "تم تحويلك إلى واتساب لإرسال طلبك."
+        };
+
 
     // --- Preloader --- 
     window.addEventListener("load", () => {
@@ -37,22 +54,42 @@ document.addEventListener("DOMContentLoaded", function() {
         lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
     });
 
+
+    function closeMobileMenu() {
+        if (!mobileMenuBtn || !nav || !overlay) return;
+        nav.classList.remove("active");
+        overlay.classList.remove("active");
+        const icon = mobileMenuBtn.querySelector("i");
+        if (icon) {
+            icon.classList.remove("fa-times");
+            icon.classList.add("fa-bars");
+        }
+        mobileMenuBtn.setAttribute("aria-expanded", "false");
+        document.body.style.overflow = "auto";
+    }
+
     // --- Mobile Menu Toggle --- 
     if (mobileMenuBtn && nav && overlay) {
+        mobileMenuBtn.setAttribute("aria-expanded", "false");
+
         mobileMenuBtn.addEventListener("click", () => {
             nav.classList.toggle("active");
             overlay.classList.toggle("active");
-            mobileMenuBtn.querySelector("i").classList.toggle("fa-bars");
-            mobileMenuBtn.querySelector("i").classList.toggle("fa-times");
-            document.body.style.overflow = nav.classList.contains("active") ? "hidden" : "auto";
+            const icon = mobileMenuBtn.querySelector("i");
+            if (icon) {
+                icon.classList.toggle("fa-bars");
+                icon.classList.toggle("fa-times");
+            }
+            const isOpen = nav.classList.contains("active");
+            mobileMenuBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+            document.body.style.overflow = isOpen ? "hidden" : "auto";
         });
 
-        overlay.addEventListener("click", () => {
-            nav.classList.remove("active");
-            overlay.classList.remove("active");
-            mobileMenuBtn.querySelector("i").classList.remove("fa-times");
-            mobileMenuBtn.querySelector("i").classList.add("fa-bars");
-            document.body.style.overflow = "auto";
+        overlay.addEventListener("click", closeMobileMenu);
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape" && nav.classList.contains("active")) {
+                closeMobileMenu();
+            }
         });
     }
 
@@ -63,11 +100,7 @@ document.addEventListener("DOMContentLoaded", function() {
             
             // Close mobile menu if open
             if (nav.classList.contains("active")) {
-                nav.classList.remove("active");
-                overlay.classList.remove("active");
-                mobileMenuBtn.querySelector("i").classList.remove("fa-times");
-                mobileMenuBtn.querySelector("i").classList.add("fa-bars");
-                document.body.style.overflow = "auto";
+                closeMobileMenu();
             }
 
             // Smooth scroll for internal links
@@ -84,12 +117,6 @@ document.addEventListener("DOMContentLoaded", function() {
                         behavior: "smooth"
                     });
                 }
-            } else if (targetId === "#") { // Scroll to top for home link
-                 e.preventDefault();
-                 window.scrollTo({
-                     top: 0,
-                     behavior: "smooth"
-                 });
             }
         });
     });
@@ -118,7 +145,7 @@ document.addEventListener("DOMContentLoaded", function() {
             link.classList.remove("active-link");
             const linkHref = link.getAttribute("href");
             // Handle both #section and # cases
-            if ((linkHref === `#${currentSection}`) || (currentSection === "home" && linkHref === "#")) {
+            if ((linkHref === `#${currentSection}`)) {
                 link.classList.add("active-link");
             }
         });
@@ -143,6 +170,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // --- WhatsApp Contact Form Submission --- 
     if (contactForm) {
+        contactForm.addEventListener("input", () => {
+            if (formStatus) {
+                formStatus.textContent = "";
+                formStatus.className = "form-status";
+            }
+        });
+
         contactForm.addEventListener("submit", function(event) {
             event.preventDefault(); // Prevent the default form submission
 
@@ -164,27 +198,41 @@ document.addEventListener("DOMContentLoaded", function() {
 
             // Enhanced validation (combining previous checks)
             if (!name || !phone || !serviceSelect.value || !areaSelect.value || !message) {
-                alert('يرجى ملء جميع الحقول المطلوبة.');
+                if (formStatus) {
+                    formStatus.textContent = uiText.required;
+                    formStatus.className = 'form-status error';
+                }
                 return;
             }
-            
+
             // Phone number validation (basic example)
-            const phoneRegex = /^\+?[0-9\s-()]{8,}$/;
-            if (!phoneRegex.test(phone)) {
-                 alert("يرجى إدخال رقم هاتف صحيح.");
-                 return;
+            const normalizedPhone = phone.replace(/[^0-9+]/g, '');
+            const phoneRegex = /^\+?[0-9]{8,15}$/;
+            if (!phoneRegex.test(normalizedPhone)) {
+                if (formStatus) {
+                    formStatus.textContent = uiText.phoneInvalid;
+                    formStatus.className = 'form-status error';
+                }
+                return;
             }
-            
+
+            if (formStatus) {
+                formStatus.textContent = uiText.preparing;
+                formStatus.className = 'form-status success';
+            }
+
             // Format the message for WhatsApp
-            let whatsappMsg = `*طلب خدمة جديد من السباك الذهبي*\n\n`;
-            whatsappMsg += `*الاسم:* ${name}\n`;
-            whatsappMsg += `*الهاتف:* ${phone}\n`;
+            let whatsappMsg = isEnglish
+                ? `*New service request from Golden Plumber*\n\n`
+                : `*طلب خدمة جديد من السباك الذهبي*\n\n`;
+            whatsappMsg += isEnglish ? `*Name:* ${name}\n` : `*الاسم:* ${name}\n`;
+            whatsappMsg += isEnglish ? `*Phone:* ${normalizedPhone}\n` : `*الهاتف:* ${normalizedPhone}\n`;
             if (email) {
-                whatsappMsg += `*البريد الإلكتروني:* ${email}\n`;
+                whatsappMsg += isEnglish ? `*Email:* ${email}\n` : `*البريد الإلكتروني:* ${email}\n`;
             }
-            whatsappMsg += `*الخدمة المطلوبة:* ${service}\n`;
-            whatsappMsg += `*المنطقة:* ${area}\n`;
-            whatsappMsg += `*تفاصيل المشكلة:*\n${message}\n`;
+            whatsappMsg += isEnglish ? `*Requested Service:* ${service}\n` : `*الخدمة المطلوبة:* ${service}\n`;
+            whatsappMsg += isEnglish ? `*Area:* ${area}\n` : `*المنطقة:* ${area}\n`;
+            whatsappMsg += isEnglish ? `*Issue Details:*\n${message}\n` : `*تفاصيل المشكلة:*\n${message}\n`;
 
             // Encode the message for the URL
             const encodedMsg = encodeURIComponent(whatsappMsg);
@@ -193,11 +241,12 @@ document.addEventListener("DOMContentLoaded", function() {
             const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMsg}`;
 
             // Open WhatsApp link in a new tab
-            window.open(whatsappUrl, '_blank');
-            
-            // Optional: Clear the form after submission or show a success message
-            // contactForm.reset();
-            alert('تم تحويلك إلى واتساب لإرسال طلبك!');
+            window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+
+            if (formStatus) {
+                formStatus.textContent = uiText.redirected;
+                formStatus.className = 'form-status success';
+            }
         });
     }
 
